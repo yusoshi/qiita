@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: qiita_production
-  username: qiita
+  username: root
+  socket: /var/lib/mysql/mysql.sock
   password: <%= ENV['QIITA_DATABASE_PASSWORD'] %>
