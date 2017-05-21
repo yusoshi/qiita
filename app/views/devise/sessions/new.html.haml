@@ -1,17 +1,79 @@
-%h2 Log in
-= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true
-  .field
-    = f.label :password
-    %br/
-    = f.password_field :password, autocomplete: "off"
-  - if devise_mapping.rememberable?
-    .field
-      = f.check_box :remember_me
-      = f.label :remember_me
-  .actions
-    = f.submit "Log in"
-= render "devise/shared/links"
+.wrapper
+  .upper-content-wrapper
+    .upper-content
+      .upper-content__left
+        %h1{class: 'upper-content__left__title'}
+          タイトル
+        .upper-content__left__explanation
+          %h1{class: 'upper-content__left__explanation__text'}
+            プログラマのための
+            %br
+            技術情報共有サービスです。
+            %br
+            目コピ中です。本物ではありません。
+          = link_to 'もっと詳しく>>（パス指定せよ）', '#', class: 'upper-content__left__explanation__more'
+
+      .upper-content__right
+        .upper-content__right__login-form
+          = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+            .upper-content__right__login-form__upper
+              = f.email_field :email, placeholder: 'ユーザ名 または メールアドレス', class: 'upper-content__right__login-form__upper__user-name-or-mail-address form-control'
+            .upper-content__right__login-form__lower
+              = f.password_field :password, autocomplete: "off", placeholder: 'パスワード', class: 'upper-content__right__login-form__lower__password form-control'
+              .upper-content__right__login-form__lower__div-login-btn
+                = f.submit "ログイン", class: 'upper-content__right__login-form__lower__div-login-btn__login-btn btn'
+            = link_to "パスワードを忘れた場合", new_password_path(resource_name)
+        .upper-content__rignt__options
+          = link_to 'GitHubで新規登録/ログイン', '#', class: 'upper-content__rignt__options github btn btn-block'
+          = link_to 'Twitterで新規登録/ログイン', '#', class: 'upper-content__rignt__options twitter btn btn-block'
+          = link_to 'Google+で新規登録/ログイン', '#', class: 'upper-content__rignt__options google-plus btn btn-block'
+          %p{class: 'upper-content__right__options__caution'}
+            許可なくTwiterに投稿することはありません。
+          %p{class: 'upper-content__right__options__mail-address'}
+            または
+            = link_to 'メールアドレス', '#'
+            で登録する
+        .upper-content__right__sns-likes
+
+        
+  .lower-content-wrapper
+    .lower-content
+      .lower-content__center
+        %a{class: 'lower-content__center__content content-1'}
+          = image_tag('top_image.png', class: 'lower-content__center__content__image')
+          %p{class: 'lower-content__center__content__text'}
+            Wahaha
+            %br
+            テストテストテストテスト、テストテスト。
+
+        .lower-content__center__content
+        %a{class: 'lower-content__center__content content-2'}
+          = image_tag('top_image2.png', class: 'lower-content__center__content__image')
+          %p{class: 'lower-content__center__content__text'}
+            Wahaha
+            %br
+            テストテストテストテスト、テストテスト。
+  %footer
+    .footer-content
+      %ul{class: 'footer-content__left'}
+        %li{class: 'footer-content__link'}
+          = link_to 'copyright', '#', class: 'footer-content__link__copyright'
+        %li{class: 'footer-content__link'}
+          = link_to '利用規約', '#'
+        %li{class: 'footer-content__link'}
+          = link_to 'プライバシー', '#'
+        %li{class: 'footer-content__link'}
+          = link_to 'ヘルプ', '#'
+        %li{class: 'footer-content__link'}
+          = link_to 'お問い合わせ', '#'
+      %ul{class: 'footer-content__right'}
+        %li{class: 'footer-content__link'}
+          = link_to 'copyright', '#', class: 'footer-content__link__copyright'
+        %li{class: 'footer-content__link'}
+          = link_to '利用規約', '#'
+        %li{class: 'footer-content__link'}
+          = link_to 'プライバシー', '#'
+        %li{class: 'footer-content__link'}
+          = link_to 'ヘルプ', '#'
+        %li{class: 'footer-content__link'}
+          = link_to 'お問い合わせ', '#'
