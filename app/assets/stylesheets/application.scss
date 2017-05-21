@@ -6,6 +6,11 @@ body {
   line-height: 1.42857;
 }
 
+a {
+  text-decoration: none;
+  color: #337ab7;
+}
+
 *, *:before, *:after {
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
@@ -14,6 +19,15 @@ body {
             box-sizing: border-box;
 }
 
+// clearfix
+.clearfix {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+
+// フォーム関連
 .form-control {
   display: block;
   padding: 6px 12px;
@@ -30,12 +44,14 @@ body {
   transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 }
 
-a {
-  text-decoration: none;
-  color: #337ab7;
+.form-group {
+  margin-bottom: 15px;
 }
 
+
+// ボタン関連
 .btn {
+  display: inline-block;
   padding: 6px 12px;
   border: 1px, solid transparent;
   border-radius: 3px;
@@ -48,11 +64,29 @@ a {
   cursor: pointer;
 }
 
+.btn-primary {
+  border-color: #4ea30a;
+  background-color: #59bb0c;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  border-color: #326a07;
+  background-color: #428b09;
+}
+
 .btn-block {
   display: block;
   width: 100%;
   margin-bottom: 5px;
 }
+
+.btn-link {
+  border-radius: 0;
+  color: #337ab7;
+  font-weight: 400;
+}
+
 
 //リセット
   @import "./reset";

@@ -21,7 +21,7 @@
             .upper-content__right__login-form__lower
               = f.password_field :password, autocomplete: "off", placeholder: 'パスワード', class: 'upper-content__right__login-form__lower__password form-control'
               .upper-content__right__login-form__lower__div-login-btn
-                = f.submit "ログイン", class: 'upper-content__right__login-form__lower__div-login-btn__login-btn btn'
+                = f.submit "ログイン", class: 'upper-content__right__login-form__lower__div-login-btn__login-btn btn btn-primary'
             = link_to "パスワードを忘れた場合", new_password_path(resource_name)
         .upper-content__rignt__options
           = link_to 'GitHubで新規登録/ログイン', '#', class: 'upper-content__rignt__options github btn btn-block'
