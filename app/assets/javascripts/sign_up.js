@@ -30,12 +30,28 @@ $(function() {
   })
 
   // メールアドレスでのサインアップを非同期通信で行う
-  // $('new_user').on('submit', function(e) {
-  //   e.preventDefault();
+  $(document).on('submit', '#new_user', function(e) {
+    e.preventDefault();
+    var name = $('#user_name').val();
+    var email = $('#user_email').val();
+    var password = $('#user_password').val();
 
-  //   $.ajax({
-  //     type: 'POST',
-  //     // 続き頼む
-  //   })
-  // })
+    $.ajax({
+      type: 'POST',
+      url: '/users.json',
+      data: {
+        user: {
+          name: name,
+          email: email,
+          password: password
+        }
+      }
+    })
+    .done(function(data) {
+      window.location.href = '/';
+    })
+    .fail(function() {
+      alert('送信に失敗しました。');
+    })
+  })
 })

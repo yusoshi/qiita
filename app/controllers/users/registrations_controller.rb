@@ -8,9 +8,17 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # POST /resource
-  # def create
-  #   super
-  # end
+  def create
+    @user = User.new(create_params)
+    if @user.save
+      respond_to do |format|
+        format.html { redirect_to root_path }
+        format.json { render json: @user, notice: 'ユーザーを作成しました。'}
+      end
+    else
+      flash.now[:alert] = "ユーザーの作成に失敗しました。"
+    end
+  end
 
   # GET /resource/edit
   # def edit
@@ -37,6 +45,12 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # protected
+
+  private
+
+  def create_params
+    params.require(:user).permit(:name, :email, :password)
+  end
 
   # If you have extra params to permit, append them to the sanitizer.
   # def configure_sign_up_params
