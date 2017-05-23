@@ -68,3 +68,7 @@ gem 'haml'
 
 # ユーザー管理
 gem 'devise'
+
+# SNS認証
+gem 'omniauth'
+gem 'omniauth-twitter'
