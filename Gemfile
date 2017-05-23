@@ -75,3 +75,7 @@ gem 'omniauth-twitter'
 
 # 環境変数庇護
 gem 'dotenv-rails'
+
+# デバッグ用
+gem 'pry-rails'
+gem 'pry-byebug'
