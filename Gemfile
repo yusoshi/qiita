@@ -72,6 +72,7 @@ gem 'devise'
 # SNS認証
 gem 'omniauth'
 gem 'omniauth-twitter'
+gem 'omniauth-github'
 
 # 環境変数庇護
 gem 'dotenv-rails'
