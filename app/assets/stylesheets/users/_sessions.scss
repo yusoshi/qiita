@@ -1,0 +1,220 @@
+
+// ログイン方法を選択するボタンの個別設定
+.github {
+  border-color: #1a1a1a;
+  background-color: #4d4d4d;
+  color: #fff;
+}
+
+.github:hover {
+  border-color: black;
+  background-color: #333;
+}
+
+.twitter {
+  border-color: #2795e9;
+  background-color: #55acee;
+  color: #fff;
+}
+
+.twitter:hover {
+  border-color: #1375c0;
+  background-color: #2795e9;
+}
+
+.google-plus {
+  border-color: #a94335;
+  background-color: #c6594b;
+  color: #fff;
+}
+
+.google-plus:hover {
+  border-color: #7a3027;
+  background-color: #a94335;
+}
+
+// DOM用
+
+.terms-of-service-caution {
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+
+.text-right {
+  text-align: right;
+}
+
+
+.wrapper {
+}
+
+// upper-content
+
+.upper-content-wrapper {
+  background-color: #f6f8f4;
+  width: 100%;
+  padding: 0 100px;
+}
+
+.upper-content {
+  @include clearfix();
+  padding-top: 80px;
+  // upper-content左側
+  &__left {
+    float: left;
+    width: 58.333333%;
+    &__title {
+      background-color: #59bb0c;
+      color: white;
+      width: 120px;
+      line-height: 40px;
+      text-align: center;
+      font-size: 26px;
+    }
+    &__explanation {
+      margin: 100px 0;
+      &__text {
+        font-weight: 400;
+        font-size: 30px;
+        font-family: Consolas,Liberation Mono,Menlo,Courier,monospace;
+      }
+      &__more {
+        color: #337ab7;
+        text-decoration: none;
+      }
+    }
+  }
+
+  // upper-content右側
+  &__right {
+    float: left;
+    width :41.6667%;
+    // form関連
+    &__login-form {
+      margin-bottom: 50px;
+      &__upper {
+        &__user-name-or-mail-address {
+          width: 100%;
+          height: 34px;
+        }
+      }
+      &__lower {
+        @include clearfix();
+        margin: 10px 0;
+        height: 34px;
+        &__password {
+          float: left;
+          height: 100%;
+          width: 75%;
+        }
+        &__div-login-btn {
+          float: left;
+          height: 100%;
+          width: 25%;
+          padding-left: 10px;
+          &__login-btn {
+            float: left;
+            height: 100%;
+            width: 100%;
+            color: #fff;
+            border-color: #4ea30a;
+            background-color: #59bb0c;
+          }
+          &__login-btn:hover {
+            border-color: #326a07;
+            background-color: #428b09;
+          }
+        }
+      }
+    }
+    // ログイン方法のオプション
+    &__options {
+      &__option {
+        width: 100%;
+        color: #fff;
+        padding: 8px 0;
+        font-size: 15px;
+      }
+      &__mail-address {
+        margin-top: 10px;
+      }
+    }
+    &__sns-likes {
+      margin: 40px 0;
+      padding-top: 15px;
+      border-top: solid 1px #ccc;
+    }
+  }
+}
+
+// lower-content
+
+.lower-content-wrapper {
+  @include clearfix();
+  padding: 60px 0;
+  width: 100%;
+  border-top: solid 1px #ebebeb;
+  background-color: #dae2d2;
+}
+
+// lowerコンテンツの個別設定
+
+.content-1 {
+  background-color: #262626;
+}
+
+.content-2 {
+  background-color: #1887d0;
+}
+
+.lower-content {
+  @include clearfix();
+  height: 70px;
+  &__center {
+    margin: 0 auto;
+    width: 66.66667%;
+    &__content {
+      display: block;
+      color: #fff;
+      @include clearfix();
+      position: relative;
+      &__image {
+        float: left;
+        height: 70px;
+        width: 120px;
+        background-color: rgba(255,255,255,.1);
+      }
+      &__text {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 20px;
+        bottom: 0;
+        left: 150px;
+        margin: auto;
+        line-height: 25px;
+      }
+    }
+  }
+}
+
+footer {
+  font-size: 13px;
+  padding: 60px 100px;
+}
+
+// footer
+.footer-content {
+  &__left {
+    float: left;
+  }
+
+  &__right {
+    float: right;
+  }
+
+  &__link {
+    float: left;
+    margin-right: 12px;
+  }
+}

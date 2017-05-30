@@ -65,3 +65,18 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'haml-rails'
 gem 'erb2haml'
 gem 'haml'
+
+# ユーザー管理
+gem 'devise'
+
+# SNS認証
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'omniauth-github'
+
+# 環境変数庇護
+gem 'dotenv-rails'
+
+# デバッグ用
+gem 'pry-rails'
+gem 'pry-byebug'
